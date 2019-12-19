@@ -10,7 +10,7 @@ import org.springframework.context.ApplicationContext;
 
 
 
-@SpringBootApplication
+//@SpringBootApplication
 public class SpringBasicsApplication {
 
 	//what are beans?
