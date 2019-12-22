@@ -4,13 +4,15 @@ import com.spring.basics.springbasics.basic.BinarySearchImpl;
 import com.spring.basics.springbasics.scope.PersonDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 
 //@SpringBootApplication
+@Configuration
+@ComponentScan
 public class SpringBasicsApplication {
 
 	//what are beans?
@@ -26,7 +28,8 @@ public class SpringBasicsApplication {
 		System.out.println("Binary search result :" + result);*/
 
 		//Application Context manages all the beans
-		ApplicationContext context = SpringApplication.run(SpringBasicsApplication.class, args);
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringBasicsApplication.class);
+		//ApplicationContext context = SpringApplication.run(SpringBasicsApplication.class, args);
 
 		BinarySearchImpl binarySearch = context.getBean(BinarySearchImpl.class);
 		System.out.println("!!!BinarySearch bean ==> " + binarySearch);
@@ -45,7 +48,8 @@ public class SpringBasicsApplication {
 		LOGGER.info("{}" + personDAO1);
 		LOGGER.info("{}" + personDAO1.getJdbcConnection());
 
-
+		// close AnnotationConfigApplicationContext
+		context.close();
 
 
 	}

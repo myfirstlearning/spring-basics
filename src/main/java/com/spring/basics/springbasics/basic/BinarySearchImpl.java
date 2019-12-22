@@ -1,22 +1,23 @@
 package com.spring.basics.springbasics.basic;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@Component
+//@Component
+@Service
 //@Scope("prototype")//creates different instance of bean every time you make a request
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class BinarySearchImpl {
 
-    private Logger LOGGER = LoggerFactory.getLogger(this.getClass());
+    //private Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     @Qualifier("bubble")
@@ -58,7 +59,7 @@ public class BinarySearchImpl {
 
     }
 
-    @PostConstruct
+   /* @PostConstruct
     public void postConstruct(){
         LOGGER.info("post construct");
     }
@@ -66,6 +67,6 @@ public class BinarySearchImpl {
     @PreDestroy
     public void preDestroy(){
         LOGGER.info("Pre Destroy");
-    }
+    }*/
 
 }

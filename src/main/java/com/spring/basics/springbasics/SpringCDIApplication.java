@@ -2,14 +2,13 @@ package com.spring.basics.springbasics;
 
 import com.spring.basics.cdi.SomeCDIBusiness;
 import com.spring.basics.componentScans.ComponentDAO;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
+//@SpringBootApplication
 @ComponentScan("com.spring.basics.cdi")
 public class SpringCDIApplication {
 
@@ -17,10 +16,10 @@ public class SpringCDIApplication {
 
     public static void main(String[] args) {
 
-        ApplicationContext context = SpringApplication.run(SpringCDIApplication.class, args);
+       /* ApplicationContext context = SpringApplication.run(SpringCDIApplication.class, args);
 
-        SomeCDIBusiness CDIBusiness = context.getBean(SomeCDIBusiness.class);
-        LOGGER.info("{} dao-{}", CDIBusiness, CDIBusiness.getSomeCDIDAO());
+        SomeCDIBusiness CDIBusiness = context.getBean(SomeCDIBusiness.class);*/
+        //LOGGER.info("{} dao-{}", CDIBusiness, CDIBusiness.getSomeCDIDAO());
 
 
     }
