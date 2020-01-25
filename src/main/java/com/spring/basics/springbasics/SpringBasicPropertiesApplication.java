@@ -12,6 +12,7 @@ import org.springframework.context.annotation.*;
 @ComponentScan
 //Configuartion app.properties, read properties from this sepicific app.properties file
 @PropertySource("classpath:app.properties")
+
 public class SpringBasicPropertiesApplication {
 
 	private static Logger LOGGER = LoggerFactory.getLogger(SpringBasicPropertiesApplication.class);

@@ -4,15 +4,16 @@ import com.spring.basics.springbasics.XMLScope.XMLPersonDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
-//@SpringBootApplication
+@SpringBootApplication
 @Configuration
-@ComponentScan
+//@ComponentScan
 public class SpringBasicApplicationContextApplication {
 
 	//what are beans?
