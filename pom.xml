@@ -100,5 +100,11 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>7a99a0652c7a-releases</name>
+        <url>http://192.168.1.165:8081/artifactory/libs-release</url>
+    </repository>
+</distributionManagement>
 </project>
